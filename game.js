@@ -11,10 +11,10 @@ function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
   computerSelection = computerSelection.toLowerCase();
   let gameData = playerSelection + " " + computerSelection;
-  
+
   if (playerSelection === computerSelection)
     return DRAW;
-  
+
   switch(gameData) {
     case "rock scissors":
     case "paper rock":
@@ -49,14 +49,8 @@ function game() {
         break;
     }
 
-    if (computerScore === 3) {
-      console.log("Computer win!");
-      return;
-    }
-
-    if (userScore === 3) {
-      console.log("You win!");
-      return;
+    if (computerScore === 3 || userScore === 3) {
+      break;
     }
   }
 
